@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
+
+:root {
+  --pink: hsl(322, 100%, 66%);
+  --pale-cyan: hsl(193, 100%, 96%);
+  --dark-cyan: hsl(192, 100%, 9%);
+  --grayish-blue: hsl(208, 11%, 55%);
+  --white: #ffffff;
+  --font-poppins: "Poppins";
+  --font-opensans: "Open Sans";
+  --font-montserrat: "Montserrat";
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.content-1 {
+  background: url("../images/bg-hero-desktop.svg") no-repeat;
+  background-size: cover;
+  background-color: var(--pale-cyan);
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+  font-family: var(--font-poppins);
+  color: var(--dark-cyan);
+  padding: 0.75em 4em;
+  font-weight: 600;
+  background-color: var(--white);
+  border-radius: 3rem;
+  border: none;
+}
+
+main {
+  padding-bottom: 4.5rem;
+}
+
+h1 {
+  color: var(--dark-cyan);
+  font-weight: 600;
+  font-family: var(--font-poppins);
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+
+h2 {
+  color: var(--dark-cyan);
+  font-weight: 400;
+  font-family: var(--font-opensans);
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:focus {
+  color: var(--white);
+  background-color: var(--pink);
+  font-family: var(--font-opensans);
+  padding: 0.75em 4em;
+  border-radius: 3rem;
+  font-weight: 600;
+  border: none;
+  font-size: 1rem;
+}
+
+.cards {
+  margin-top: 9rem;
+}
+
+.card {
+  padding: 4rem 0 4rem 6rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 8rem;
+}
+
+.card__title {
+  color: var(--dark-cyan);
+  font-family: var(--font-poppins);
+  font-size: 2.25rem;
+}
+
+.card__subtitle {
+  color: var(--grayish-blue);
+  font-family: var(--font-opensans);
+  font-size: 1.075rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.card__image {
+  width: 95%;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
