@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+html,
+body {
+  height: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background: url("../images/bg-desktop.svg") no-repeat hsl(257deg, 40%, 49%);
+  margin: 0;
+  padding: 2rem 5rem;
+  margin-bottom: 6rem;
+}
+
+.logo {
+  margin-bottom: 5rem;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3.2rem;
+}
+main img {
+  max-width: 100%;
+  height: auto;
+}
+
+.content {
+  margin-top: 1.1rem;
+}
+.content h1 {
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: 1.5em;
+  color: #ffffff;
+  margin-bottom: 1.4rem;
+  font-size: 2.6rem;
+}
+.content h2 {
+  color: #fbeaff;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.5em;
+  margin-top: 0;
+  margin-bottom: 1.55rem;
+}
+.content button {
+  padding: 0.8rem 4rem;
+  color: hsl(257deg, 40%, 49%);
+  font-size: 1.2rem;
+  background-color: #ffffff;
+  font-family: Poppins;
+  font-weight: 400;
+  border: none;
+  border-radius: 3rem;
+  cursor: pointer;
+}
+.content button:hover {
+  color: #fbeaff;
+  background-color: hsl(300deg, 69%, 71%);
+}
+
+footer {
+  margin-top: 2rem;
+  padding-bottom: 3.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+footer i {
+  color: #ffffff;
+  border: 1.5px solid #ffffff;
+  border-radius: 50%;
+  padding: 1rem;
+  cursor: pointer;
+}
+footer i:hover {
+  border: 1.5px solid hsl(300deg, 69%, 71%);
+  color: hsl(300deg, 69%, 71%);
+}
+footer .fa-facebook-f {
+  padding: 1.75rem 1.25rem;
+}
+footer .fa-twitter {
+  padding: 1.75rem 1.05rem;
+}
+footer .fa-instagram {
+  padding: 0.8rem 1rem;
+}
+
+@media (max-width: 1025px) {
+  body {
+    padding: 2.2rem 2.5rem;
+    background-size: cover;
+  }
+
+  .content {
+    margin-top: 0;
+  }
+  .content h1 {
+    margin-top: 0.75rem;
+    font-size: 2.1rem;
+    margin-bottom: 0.9rem;
+  }
+  .content h2 {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  .content button {
+    padding: 0.5rem 3rem;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 769px) {
+  main {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .content h1 {
+    text-align: center;
+    font-size: 2.7rem;
+  }
+  .content h2 {
+    font-family: 1.7rem;
+    text-align: center;
+  }
+
+  footer {
+    justify-content: center;
+  }
+}
+@media (max-width: 450px) {
+  body {
+    background: url("../images/bg-mobile.svg") no-repeat hsl(257deg, 40%, 49%);
+    background-size: contain;
+  }
+
+  .logo {
+    height: 60px;
+    width: 140px;
+    margin-bottom: 3rem;
+  }
+
+  .content {
+    margin-top: 0;
+  }
+
+  main {
+    gap: 2rem;
+    grid-template-rows: 0.3fr 0.7fr;
+  }
+
+  .content {
+    margin-top: 2rem;
+  }
+  .content h1 {
+    font-size: 1.6rem;
+  }
+  .content h2 {
+    font-size: 1.05rem;
+    margin-bottom: 1.6rem;
+  }
+  .content button {
+    padding: 0.7rem 5rem;
+  }
+
+  footer {
+    margin-top: 5rem;
+  }
+  footer .fa-xl {
+    font-size: 1.2em;
+  }
+  footer .fa-2x {
+    font-size: 1.3em;
+  }
+  footer .fa-facebook-f {
+    padding: 1.2rem 0.8rem;
+  }
+  footer .fa-instagram {
+    padding: 0.6rem 0.6rem 0.6rem;
+  }
+  footer .fa-twitter {
+    padding: 1.2rem 0.6rem;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
