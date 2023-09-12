@@ -30,10 +30,7 @@ p {
   background-color: var(--pale-cyan);
 }
 
-.btn-primary,
-.btn-primary:hover,
-.btn-primary:active,
-.btn-primary:focus {
+.btn-primary {
   font-family: var(--font-poppins);
   color: var(--dark-cyan);
   padding: 0.75em 4em;
@@ -41,6 +38,16 @@ p {
   background-color: var(--white);
   border-radius: 3rem;
   border: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  color: var(--grayish-blue);
+  -webkit-box-shadow: 0px 0px 29px 2px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: 0px 0px 29px 2px rgba(0, 0, 0, 0.07);
+  box-shadow: 0px 0px 29px 2px rgba(0, 0, 0, 0.07);
+  background-color: var(--white);
 }
 
 main {
@@ -63,10 +70,7 @@ h2 {
   line-height: 1.4;
 }
 
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:active,
-.btn-secondary:focus {
+.btn-secondary {
   color: var(--white);
   background-color: var(--pink);
   font-family: var(--font-opensans);
@@ -75,6 +79,16 @@ h2 {
   font-weight: 600;
   border: none;
   font-size: 1rem;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:focus {
+  background-color: var(--pink);
+  opacity: 0.6;
+  -webkit-box-shadow: 0px 0px 29px 2px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: 0px 0px 29px 2px rgba(0, 0, 0, 0.07);
+  box-shadow: 0px 0px 29px 2px rgba(0, 0, 0, 0.07);
 }
 
 .cards {
@@ -119,6 +133,19 @@ h2 {
   padding: 3.5em 2em 3em;
   width: 55%;
   border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* margin-top: 8rem; */
+  /* transform: translateY(30%); */
+  /* top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 999; */
+  /* z-index: 99; */
 }
 
 .community-card .btn-secondary {
@@ -145,15 +172,41 @@ h6 {
 footer {
   background-color: var(--dark-cyan);
   color: var(--pale-cyan);
-  padding: 5rem;
+  padding: 15rem 0 2rem;
+  /* z-index: -1; */
 }
 
 footer ul {
   list-style-type: none;
+  padding: 0;
 }
 
 footer a {
   color: var(--pale-cyan);
   text-decoration: none;
+}
 
+footer a:hover {
+  text-decoration: underline;
+}
+
+.contact li {
+  border: 1px solid var(--pale-cyan);
+  border-radius: 50%;
+}
+
+.fa-facebook-f {
+  padding: 1em 0.75em;
+}
+
+.fa-twitter,
+.fa-instagram {
+  padding: 1em 0.6em;
+}
+
+.contact li:hover,
+.contact i:hover {
+  cursor: pointer;
+  border-color: var(--pink);
+  color: var(--pink);
 }
