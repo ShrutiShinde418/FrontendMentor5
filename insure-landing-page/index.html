@@ -175,5 +175,20 @@
       >. Coded by
       <a href="https://github.com/ShrutiShinde418">ShrutiShinde418</a>.
     </div>
+    <script>
+      const btn = document.querySelector(".btn");
+      const offcanvas = document.querySelector(".offcanvas");
+      const media = window.matchMedia("(min-width: 768px)");
+      btn.addEventListener("click", () => {
+        offcanvas.classList.toggle("show");
+      });
+      const removeOffcanvas = (e) => {
+        if (e.matches) {
+          offcanvas.classList.remove("show");
+        }
+      };
+      media.addEventListener("change", removeOffcanvas);
+      removeOffcanvas(media);
+    </script>
   </body>
 </html>

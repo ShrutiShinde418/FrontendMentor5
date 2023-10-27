@@ -84,7 +84,7 @@ header {
   margin: 0 auto;
   &:extend(.container);
   nav {
-    padding: 1.5rem 0;
+    padding: 1.5rem 1rem;
     font-family: "Karla";
     display: flex;
     align-items: center;
@@ -105,11 +105,9 @@ header {
     }
     .circle-icon {
       transition-duration: 0.5s;
-      // position: absolute;
       height: 56px;
       width: 60px;
       top: 2px;
-      // border-radius: 100%;
       background: transparent;
       border: 3px solid black;
       left: -15px;
@@ -142,9 +140,13 @@ header {
       }
     }
   }
-  @media @min768 {
+  @media @min640 {
     nav {
       padding: 1.5rem;
+    }
+  }
+  @media @min768 {
+    nav {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
@@ -173,18 +175,19 @@ header {
     }
   }
 }
+
 .offcanvas {
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 0;
   background-color: @dark-violet;
   padding: 1.5rem 0;
-  min-height: 100vh;
-  height: 100%;
-  z-index: 999;
+  transition: 0.5s cubic-bezier(0.17, 0.04, 0.03, 0.94);
   ul {
-    .navbar-nav(flex,column, 2rem);
+    .navbar-nav(none, column, 2rem);
     button {
       .page-btn(@dark-violet, @light-gray);
     }
@@ -193,6 +196,22 @@ header {
     display: none;
   }
 }
+
+.offcanvas.show {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-width: 100vw;
+  z-index: 9;
+  ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 main {
   padding: 4rem auto;
   background-color: @dark-violet;
@@ -204,7 +223,6 @@ main {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-    // padding: 3rem 0;
     position: relative;
     .main__content {
       display: flex;
@@ -635,7 +653,7 @@ footer {
   text-align: center;
   padding: 2rem;
   align-self: self-end;
-}
-.attribution a {
-  color: @blue;
+  a {
+    color: @blue;
+  }
 }
