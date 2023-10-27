@@ -29,7 +29,7 @@
           </ul>
         </div>
         <div class="btn">
-          <div class="circle-icon"></div>
+          <div class="square-icon"></div>
           <div class="icon"></div>
         </div>
       </nav>
@@ -177,10 +177,12 @@
     </div>
     <script>
       const btn = document.querySelector(".btn");
+      const icon = document.querySelector(".icon");
       const offcanvas = document.querySelector(".offcanvas");
       const media = window.matchMedia("(min-width: 768px)");
       btn.addEventListener("click", () => {
         offcanvas.classList.toggle("show");
+        icon.classList.toggle("active");
       });
       const removeOffcanvas = (e) => {
         if (e.matches) {
